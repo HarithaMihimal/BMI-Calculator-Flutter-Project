@@ -53,37 +53,83 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                     ),
                   ],
                 ),
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Weight"),
-                    Text(
-                      "75",
-                      style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Column(
                       children: [
-                        FloatingActionButton(
-                          shape: ShapeBorder.lerp(
-                            CircleBorder(),
-                            CircleBorder(),
-                            0.5,
+                        Text("Weight"),
+                        Text(
+                          "75",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
                           ),
-                          onPressed: () {},
-                          child: Icon(Icons.remove),
                         ),
-                        SizedBox(width: 20),
-                        FloatingActionButton(
-                          shape: ShapeBorder.lerp(
-                            CircleBorder(),
-                            CircleBorder(),
-                            0.5,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: () {},
+                              child: Icon(Icons.remove),
+                            ),
+                            SizedBox(width: 20),
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: () {},
+                              child: Icon(Icons.add),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 40),
+                    Column(
+                      children: [
+                        Text("Age"),
+                        Text(
+                          "24",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
                           ),
-                          onPressed: () {},
-                          child: Icon(Icons.add),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: () {},
+                              child: Icon(Icons.remove),
+                            ),
+                            SizedBox(width: 20),
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: () {},
+                              child: Icon(Icons.add),
+                            ),
+                          ],
                         ),
                       ],
                     ),
