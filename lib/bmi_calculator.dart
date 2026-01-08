@@ -35,7 +35,10 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                       flex: 10,
                       child: Container(
                         padding: EdgeInsets.all(20),
-                        color: Colors.amber,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.amber,
+                        ),
                         child: Column(
                           children: [
                             Icon(Icons.male, size: 50),
@@ -49,7 +52,10 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                       flex: 10,
                       child: Container(
                         padding: EdgeInsets.all(20),
-                        color: Colors.blue,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue,
+                        ),
                         child: Column(
                           children: [
                             Icon(Icons.female, size: 50),
