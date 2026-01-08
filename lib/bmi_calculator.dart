@@ -10,6 +10,21 @@ class BmiCalculatorPage extends StatefulWidget {
 class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
   @override
   Widget build(BuildContext context) {
-    return const Text("hello world");
+    return Scaffold(
+      //center the appbar title
+      appBar: AppBar(title: const Text('BMI Calculator'), centerTitle: true),
+      body: Container(
+        color: Colors.red,
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            const Text('BMI Calculator Page'),
+            ElevatedButton(onPressed: () {}, child: Text("Calculate BMI")),
+          ],
+        ),
+      ),
+    );
   }
 }
