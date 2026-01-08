@@ -11,9 +11,15 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[500],
       //center the appbar title
-      appBar: AppBar(title: const Text('BMI Calculator'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('BMI Calculator'),
+        centerTitle: true,
+        backgroundColor: Colors.green[200],
+      ),
       body: Container(
+        padding: EdgeInsets.all(32),
         // color: Colors.red,
         width: double.infinity,
         child: Column(
@@ -105,7 +111,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                                 onPressed: () {},
                                 child: Icon(Icons.remove),
                               ),
-                              SizedBox(width: 20),
+                              SizedBox(width: 5),
                               FloatingActionButton(
                                 elevation: 0,
                                 shape: ShapeBorder.lerp(
@@ -121,7 +127,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 40),
+                    SizedBox(width: 5),
                     Container(
                       color: Colors.orange,
                       child: Column(
@@ -147,7 +153,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                                 onPressed: () {},
                                 child: Icon(Icons.remove),
                               ),
-                              SizedBox(width: 20),
+                              SizedBox(width: 5),
                               FloatingActionButton(
                                 elevation: 0,
                                 shape: ShapeBorder.lerp(
@@ -167,6 +173,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                 ),
               ],
             ),
+            SizedBox(height: 25),
             ElevatedButton(onPressed: () {}, child: Text("Calculate BMI")),
           ],
         ),
