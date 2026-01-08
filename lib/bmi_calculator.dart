@@ -14,13 +14,83 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
       //center the appbar title
       appBar: AppBar(title: const Text('BMI Calculator'), centerTitle: true),
       body: Container(
-        color: Colors.red,
+        // color: Colors.red,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const Text('BMI Calculator Page'),
+          children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Text("MALE")),
+                    ElevatedButton(onPressed: () {}, child: Text("FEMALE")),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Height"),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "183",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text("cm"),
+                      ],
+                    ),
+                    Slider(
+                      min: 80,
+                      max: 200,
+                      value: 183,
+                      onChanged: (value) {},
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Weight"),
+                    Text(
+                      "75",
+                      style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FloatingActionButton(
+                          shape: ShapeBorder.lerp(
+                            CircleBorder(),
+                            CircleBorder(),
+                            0.5,
+                          ),
+                          onPressed: () {},
+                          child: Icon(Icons.remove),
+                        ),
+                        SizedBox(width: 20),
+                        FloatingActionButton(
+                          shape: ShapeBorder.lerp(
+                            CircleBorder(),
+                            CircleBorder(),
+                            0.5,
+                          ),
+                          onPressed: () {},
+                          child: Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
             ElevatedButton(onPressed: () {}, child: Text("Calculate BMI")),
           ],
         ),
