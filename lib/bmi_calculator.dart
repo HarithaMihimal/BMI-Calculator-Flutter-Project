@@ -25,113 +25,143 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(onPressed: () {}, child: Text("MALE")),
-                    ElevatedButton(onPressed: () {}, child: Text("FEMALE")),
+                    Container(
+                      padding: EdgeInsets.all(20),
+                      color: Colors.amber,
+                      child: Column(
+                        children: [
+                          Icon(Icons.male, size: 50),
+                          Text("Male", style: TextStyle(fontSize: 20)),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 50),
+                    Container(
+                      padding: EdgeInsets.all(20),
+                      color: Colors.blue,
+                      child: Column(
+                        children: [
+                          Icon(Icons.female, size: 50),
+                          Text("Female", style: TextStyle(fontSize: 20)),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                Column(
-                  children: [
-                    Text("Height"),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "183",
-                          style: TextStyle(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
+                SizedBox(height: 30),
+                Container(
+                  color: Colors.green,
+                  child: Column(
+                    children: [
+                      Text("Height"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "183",
+                            style: TextStyle(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Text("cm"),
-                      ],
-                    ),
-                    Slider(
-                      min: 80,
-                      max: 200,
-                      value: 183,
-                      onChanged: (value) {},
-                    ),
-                  ],
+                          Text("cm"),
+                        ],
+                      ),
+                      Slider(
+                        min: 80,
+                        max: 200,
+                        value: 183,
+                        onChanged: (value) {},
+                      ),
+                    ],
+                  ),
                 ),
+                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        Text("Weight"),
-                        Text(
-                          "75",
-                          style: TextStyle(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
+                    Container(
+                      color: Colors.purple,
+                      child: Column(
+                        children: [
+                          Text("Weight"),
+                          Text(
+                            "75",
+                            style: TextStyle(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: () {},
+                                child: Icon(Icons.remove),
                               ),
-                              onPressed: () {},
-                              child: Icon(Icons.remove),
-                            ),
-                            SizedBox(width: 20),
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                              SizedBox(width: 20),
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: () {},
+                                child: Icon(Icons.add),
                               ),
-                              onPressed: () {},
-                              child: Icon(Icons.add),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(width: 40),
-                    Column(
-                      children: [
-                        Text("Age"),
-                        Text(
-                          "24",
-                          style: TextStyle(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
+                    Container(
+                      color: Colors.orange,
+                      child: Column(
+                        children: [
+                          Text("Age"),
+                          Text(
+                            "24",
+                            style: TextStyle(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: () {},
+                                child: Icon(Icons.remove),
                               ),
-                              onPressed: () {},
-                              child: Icon(Icons.remove),
-                            ),
-                            SizedBox(width: 20),
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                              SizedBox(width: 20),
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: () {},
+                                child: Icon(Icons.add),
                               ),
-                              onPressed: () {},
-                              child: Icon(Icons.add),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
