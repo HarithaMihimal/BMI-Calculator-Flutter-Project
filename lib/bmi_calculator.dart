@@ -19,180 +19,199 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
         backgroundColor: Colors.green[200],
       ),
       body: Container(
-        padding: EdgeInsets.all(32),
         // color: Colors.red,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 10,
-                      child: Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.amber,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.male, size: 50),
-                            Text("Male", style: TextStyle(fontSize: 20)),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Spacer(flex: 1),
-                    Expanded(
-                      flex: 10,
-                      child: Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.female, size: 50),
-                            Text("Female", style: TextStyle(fontSize: 20)),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 30),
-                Container(
-                  color: Colors.green,
-                  child: Column(
+            Padding(
+              padding: EdgeInsets.all(32),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Height"),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "183",
-                            style: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                            ),
+                      Expanded(
+                        flex: 10,
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.amber,
                           ),
-                          Text("cm"),
-                        ],
+                          child: Column(
+                            children: [
+                              Icon(Icons.male, size: 50),
+                              Text("Male", style: TextStyle(fontSize: 20)),
+                            ],
+                          ),
+                        ),
                       ),
-                      Slider(
-                        min: 80,
-                        max: 200,
-                        value: 183,
-                        onChanged: (value) {},
+                      Spacer(flex: 1),
+                      Expanded(
+                        flex: 10,
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue,
+                          ),
+                          child: Column(
+                            children: [
+                              Icon(Icons.female, size: 50),
+                              Text("Female", style: TextStyle(fontSize: 20)),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                ),
-                SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 10,
-                      child: Container(
-                        color: Colors.purple,
-                        child: Column(
+                  SizedBox(height: 30),
+                  Container(
+                    color: Colors.green,
+                    child: Column(
+                      children: [
+                        Text("Height"),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Weight"),
                             Text(
-                              "75",
+                              "183",
                               style: TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                FloatingActionButton(
-                                  elevation: 0,
-                                  shape: ShapeBorder.lerp(
-                                    CircleBorder(),
-                                    CircleBorder(),
-                                    0.5,
-                                  ),
-                                  onPressed: () {},
-                                  child: Icon(Icons.remove),
-                                ),
-                                SizedBox(width: 5),
-                                FloatingActionButton(
-                                  elevation: 0,
-                                  shape: ShapeBorder.lerp(
-                                    CircleBorder(),
-                                    CircleBorder(),
-                                    0.5,
-                                  ),
-                                  onPressed: () {},
-                                  child: Icon(Icons.add),
-                                ),
-                              ],
-                            ),
+                            Text("cm"),
                           ],
                         ),
-                      ),
+                        Slider(
+                          min: 80,
+                          max: 200,
+                          value: 183,
+                          onChanged: (value) {},
+                        ),
+                      ],
                     ),
-                    Spacer(flex: 1),
-                    Expanded(
-                      flex: 10,
-                      child: Container(
-                        color: Colors.orange,
-                        child: Column(
-                          children: [
-                            Text("Age"),
-                            Text(
-                              "24",
-                              style: TextStyle(
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold,
+                  ),
+                  SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 10,
+                        child: Container(
+                          color: Colors.purple,
+                          child: Column(
+                            children: [
+                              Text("Weight"),
+                              Text(
+                                "75",
+                                style: TextStyle(
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                FloatingActionButton(
-                                  elevation: 0,
-                                  shape: ShapeBorder.lerp(
-                                    CircleBorder(),
-                                    CircleBorder(),
-                                    0.5,
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FloatingActionButton(
+                                    elevation: 0,
+                                    shape: ShapeBorder.lerp(
+                                      CircleBorder(),
+                                      CircleBorder(),
+                                      0.5,
+                                    ),
+                                    onPressed: () {},
+                                    child: Icon(Icons.remove),
                                   ),
-                                  onPressed: () {},
-                                  child: Icon(Icons.remove),
-                                ),
-                                SizedBox(width: 5),
-                                FloatingActionButton(
-                                  elevation: 0,
-                                  shape: ShapeBorder.lerp(
-                                    CircleBorder(),
-                                    CircleBorder(),
-                                    0.5,
+                                  SizedBox(width: 5),
+                                  FloatingActionButton(
+                                    elevation: 0,
+                                    shape: ShapeBorder.lerp(
+                                      CircleBorder(),
+                                      CircleBorder(),
+                                      0.5,
+                                    ),
+                                    onPressed: () {},
+                                    child: Icon(Icons.add),
                                   ),
-                                  onPressed: () {},
-                                  child: Icon(Icons.add),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
+                      Spacer(flex: 1),
+                      Expanded(
+                        flex: 10,
+                        child: Container(
+                          color: Colors.orange,
+                          child: Column(
+                            children: [
+                              Text("Age"),
+                              Text(
+                                "24",
+                                style: TextStyle(
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FloatingActionButton(
+                                    elevation: 0,
+                                    shape: ShapeBorder.lerp(
+                                      CircleBorder(),
+                                      CircleBorder(),
+                                      0.5,
+                                    ),
+                                    onPressed: () {},
+                                    child: Icon(Icons.remove),
+                                  ),
+                                  SizedBox(width: 5),
+                                  FloatingActionButton(
+                                    elevation: 0,
+                                    shape: ShapeBorder.lerp(
+                                      CircleBorder(),
+                                      CircleBorder(),
+                                      0.5,
+                                    ),
+                                    onPressed: () {},
+                                    child: Icon(Icons.add),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.pink,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(),
+                      minimumSize: Size(double.infinity, 100),
                     ),
-                  ],
+                    onPressed: () {},
+                    child: Text("Calculate BMI"),
+                  ),
                 ),
               ],
             ),
-            SizedBox(height: 25),
-            ElevatedButton(onPressed: () {}, child: Text("Calculate BMI")),
           ],
         ),
       ),
