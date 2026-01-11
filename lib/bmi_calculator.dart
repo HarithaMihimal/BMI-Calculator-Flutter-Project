@@ -11,7 +11,8 @@ class BmiCalculatorPage extends StatefulWidget {
 class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
   bool isMale = true;
   int height = 183;
-  
+  int weight = 75;
+  int age = 24;
 
   @override
   Widget build(BuildContext context) {
