@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class BmiCalculatorPage extends StatefulWidget {
   const BmiCalculatorPage({super.key});
@@ -8,15 +9,20 @@ class BmiCalculatorPage extends StatefulWidget {
 }
 
 class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
+  bool isMale = true;
+  int height = 183;
+  int weight = 75;
+  int age = 24;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[500],
+      backgroundColor: kBackgroundColor,
       //center the appbar title
       appBar: AppBar(
-        title: const Text('BMI Calculator'),
+        title: const Text('BMI Calculator', style: TextStyle(color: kTilwCol)),
         centerTitle: true,
-        backgroundColor: Colors.green[200],
+        backgroundColor: kAppBarColor,
       ),
       body: Container(
         // color: Colors.red,
@@ -38,12 +44,22 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.amber,
+                            color: kMaleCardColor,
                           ),
                           child: Column(
                             children: [
-                              Icon(Icons.male, size: 50),
-                              Text("Male", style: TextStyle(fontSize: 20)),
+                              Icon(
+                                Icons.male,
+                                size: 50,
+                                color: kLabelTextColor,
+                              ),
+                              Text(
+                                "Male",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: kLabelTextColor,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -55,12 +71,22 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.blue,
+                            color: kFemaleCardColor,
                           ),
                           child: Column(
                             children: [
-                              Icon(Icons.female, size: 50),
-                              Text("Female", style: TextStyle(fontSize: 20)),
+                              Icon(
+                                Icons.female,
+                                size: 50,
+                                color: kLabelTextColor,
+                              ),
+                              Text(
+                                "Female",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: kLabelTextColor,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -69,10 +95,16 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                   ),
                   SizedBox(height: 30),
                   Container(
-                    color: Colors.green,
+                    color: kHeightContainerColor,
                     child: Column(
                       children: [
-                        Text("Height"),
+                        Text(
+                          "Height",
+                          style: TextStyle(
+                            color: kLabelTextColor,
+                            fontSize: 18,
+                          ),
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -81,9 +113,13 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                               style: TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,
+                                color: kNumberTextColor,
                               ),
                             ),
-                            Text("cm"),
+                            Text(
+                              "cm",
+                              style: TextStyle(color: kLabelTextColor),
+                            ),
                           ],
                         ),
                         Slider(
@@ -102,15 +138,22 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                       Expanded(
                         flex: 10,
                         child: Container(
-                          color: Colors.purple,
+                          color: kWeightContainerColor,
                           child: Column(
                             children: [
-                              Text("Weight"),
+                              Text(
+                                "Weight",
+                                style: TextStyle(
+                                  color: kLabelTextColor,
+                                  fontSize: 18,
+                                ),
+                              ),
                               Text(
                                 "75",
                                 style: TextStyle(
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold,
+                                  color: kNumberTextColor,
                                 ),
                               ),
                               Row(
@@ -147,15 +190,22 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                       Expanded(
                         flex: 10,
                         child: Container(
-                          color: Colors.orange,
+                          color: kAgeContainerColor,
                           child: Column(
                             children: [
-                              Text("Age"),
+                              Text(
+                                "Age",
+                                style: TextStyle(
+                                  color: kLabelTextColor,
+                                  fontSize: 18,
+                                ),
+                              ),
                               Text(
                                 "24",
                                 style: TextStyle(
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold,
+                                  color: kNumberTextColor,
                                 ),
                               ),
                               Row(
@@ -201,13 +251,19 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                 Expanded(
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.pink,
-                      foregroundColor: Colors.white,
+                      backgroundColor: kCalculateButtonColor,
+                      foregroundColor: kButtonTextColor,
                       shape: RoundedRectangleBorder(),
                       minimumSize: Size(double.infinity, 100),
                     ),
                     onPressed: () {},
-                    child: Text("Calculate BMI"),
+                    child: Text(
+                      "Calculate BMI",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ],
